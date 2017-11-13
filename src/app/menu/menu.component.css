@@ -1,0 +1,54 @@
+/* menu do topo */
+
+#menu nav,
+#menu,
+#menu nav {
+  height: 115px;
+}
+
+#menu ul li a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+
+/* tamanho logo */
+
+#menu #logo img,
+#menu #logo {
+  width: 170px;
+}
+
+
+/* menu resolução baixa */
+
+#menu #btn-menu {
+  color: #fff;
+  font-size: 30px;
+}
+
+
+/* filtro laranja sobre video */
+
+#menu div#navbarSupportedContent button {
+  color: #fff;
+  width: 175px;
+  border: 1px solid #fff;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'open sans';
+}
+
+#menu div#navbarSupportedContent button:hover {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+@media screen and (max-width: 992px) {
+  #menu {
+    color: #fff;
+    background-color: #1c303b;
+  }
+}
