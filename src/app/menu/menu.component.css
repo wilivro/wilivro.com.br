@@ -1,4 +1,11 @@
-/* menu do topo */
+#menu {
+  position: absolute;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) -10%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) -10%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) -10%, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+}
 
 #menu nav,
 #menu,
@@ -9,46 +16,70 @@
 #menu ul li a {
   color: #fff;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
 }
-
-
-/* tamanho logo */
 
 #menu #logo img,
 #menu #logo {
   width: 170px;
 }
 
-
-/* menu resolução baixa */
-
-#menu #btn-menu {
-  color: #fff;
-  font-size: 30px;
-}
-
-
-/* filtro laranja sobre video */
-
-#menu div#navbarSupportedContent button {
+#menu div#navbar-menu button {
   color: #fff;
   width: 175px;
   border: 1px solid #fff;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   border-radius: 8px;
   cursor: pointer;
-  font-family: 'open sans';
+  font-family: OpenSansBold, Arial, sans-serif;
 }
 
-#menu div#navbarSupportedContent button:hover {
+#menu div#navbar-menu button:hover {
   background-color: rgba(0, 0, 0, .5);
 }
 
+
+/* CSS Smartphones */
+
 @media screen and (max-width: 992px) {
-  #menu {
+  #btn-menu {
     color: #fff;
+    font-size: 30px;
+  }
+  #navbar-menu ul,
+  #menu {
+    width: 100%;
     background-color: #1c303b;
+  }
+  #navbar-menu ul {
+    margin-top: -15px;
+  }
+  #navbar-menu ul li {
+    text-align: center;
+    margin: 5px 0;
+  }
+  /* Final CSS Smartphones */
+}
+
+@media screen and (min-width: 993px) {
+  #navbar-menu,
+  #navbar-menu ul {
+    height: 100%;
+  }
+  #navbar-menu ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20px;
+    box-sizing: border-box;
+    margin: 5px 10px;
+  }
+  #navbar-menu ul li:hover:not(.not) {
+    border-top: 5px solid #cb613f;
+    margin-top: 0;
+  }
+  #navbar-menu ul li:hover:not(.not) a {
+    color: #48ac97;
   }
 }

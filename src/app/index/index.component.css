@@ -1,25 +1,89 @@
 /*posição do video*/
 
-video#bgvid {
-  position: fixed;
+#ct-video {
+  position: relative;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 730px;
+  z-index: -1;
+}
+
+#ct-video .container {
+  height: 100%;
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#ct-video .container h1 {
+  font-family: GothamXLight;
+  font-size: 78px;
+}
+
+#ct-video .container div p {
+  font-family: GothamLight;
+  font-size: 24px;
+}
+
+video#bg-vid {
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -100;
+  z-index: -1000;
 }
-
-
-/*sombra laranjada sobre o video*/
 
 .shadow {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(230, 190, 0, 0.35);
-  top: -140px;
+  top: 0;
   left: 0;
   z-index: -100;
+}
+
+
+/* Section Sobre */
+
+#sobre .container h1 {
+  font-family: GothamXLight;
+  border-bottom: 2px solid #e6b653;
+  font-weight: 600;
+  color: #1c303b;
+}
+
+#sobre p {
+  color: #1c303b;
+}
+
+
+/* CSS Smartphones */
+
+@media screen and (max-width: 992px) {
+  #ct-video {
+    background: url(../../assets/img/mob.png) no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+  }
+  #bg-vid {
+    display: none;
+  }
+  #ct-video .container h1 {
+    text-align: center;
+    font-family: GothamXLight;
+    font-size: 50px;
+  }
+  #ct-video .container div p {
+    font-family: GothamLight;
+    font-size: 20px;
+  }
+  /* Final CSS Smartphones */
 }

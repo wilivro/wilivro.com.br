@@ -1,16 +1,47 @@
-body::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);	
-	background-color: #fff;
+@font-face {
+  font-family: OpenSansBold;
+  src: url(assets/font/OpenSans-Bold.ttf);
 }
-body::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: rgba(0,0,0,.2);
+
+@font-face {
+  font-family: GothamLight;
+  src: url(assets/font/Gotham-Light.otf);
 }
-body::-webkit-scrollbar-thumb
-{
-	border-radius: 2px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: rgb(28,48,59);
+
+@font-face {
+  font-family: GothamXLight;
+  src: url(assets/font/Gotham-XLight.otf);
+}
+
+* {
+  font-family: OpenSansBold, Arial, sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: rgb(28, 48, 59);
+}
+
+.linear {
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
