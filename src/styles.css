@@ -4,6 +4,16 @@
 }
 
 @font-face {
+  font-family: OpenSans;
+  src: url(assets/font/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSansLight;
+  src: url(assets/font/OpenSans-Light.ttf);
+}
+
+@font-face {
   font-family: GothamLight;
   src: url(assets/font/Gotham-Light.otf);
 }
@@ -11,6 +21,11 @@
 @font-face {
   font-family: GothamXLight;
   src: url(assets/font/Gotham-XLight.otf);
+}
+
+@font-face {
+  font-family: GothamBold;
+  src: url(assets/font/Gotham-Bold.ttf);
 }
 
 * {
@@ -44,4 +59,8 @@ body::-webkit-scrollbar-thumb {
   -moz-transition: all 0.25s linear;
   -o-transition: all 0.25s linear;
   transition: all 0.25s linear;
+}
+
+.d-inline-table {
+  display: inline-table;
 }

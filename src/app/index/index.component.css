@@ -1,3 +1,14 @@
+:root {
+  --branca: #ffffff;
+  --cinza-escuro: #1c303b;
+  --laranja-claro: #e6b653;
+  --laranja: #fdc00f;
+  --laranja-escuro: #d7a30d;
+  --verde: #46b29d;
+  --verde-escuro: #3da490;
+}
+
+
 /*posição do video*/
 
 #ct-video {
@@ -16,7 +27,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--branca);
 }
 
 #ct-video .container h1 {
@@ -53,15 +64,135 @@ video#bg-vid {
 
 /* Section Sobre */
 
-#sobre .container h1 {
-  font-family: GothamXLight;
-  border-bottom: 2px solid #e6b653;
-  font-weight: 600;
-  color: #1c303b;
+#sobre h1 {
+  color: var(--cinza-escuro);
 }
 
 #sobre p {
-  color: #1c303b;
+  font-family: OpenSansLight;
+  font-size: 22px;
+  color: var(--cinza-escuro);
+}
+
+
+/* section Produtos */
+
+#produtos .container-fluid {
+  background-color: var(--verde-escuro);
+}
+
+#bg1,
+#bg2,
+#bg3 {
+  position: relative;
+  height: 505px;
+  padding: 150px 0;
+}
+
+#bg1 {
+  background: url("../../assets/img/tablet1.png") no-repeat;
+  background-size: 50%;
+  background-attachment: fixed;
+  background-position: 100% 50%;
+  background-color: var(--verde-escuro);
+  ;
+}
+
+#bg2 {
+  background: url("../../assets/img/tablet2.png") no-repeat;
+  background-size: 50%;
+  background-attachment: fixed;
+  background-position: 100% 50%;
+  border-top: 2px solid var(--verde);
+  border-bottom: 2px solid var(--verde);
+  background-color: var(--verde-escuro);
+}
+
+#bg3 {
+  background: url("../../assets/img/tablet3.png") no-repeat;
+  background-size: 50%;
+  background-attachment: fixed;
+  background-position: 100% 50%;
+  background-color: var(--verde-escuro);
+}
+
+#produtos h4 {
+  color: var(--laranja-claro);
+  --laranja: #fdc00f;
+  font-family: GothamBold;
+}
+
+#produtos p {
+  font-family: OpenSansLight;
+  font-size: 19px;
+  font-weight: 100;
+  color: var(--branca);
+}
+
+#produtos button {
+  padding: 15px 50px;
+  background-color: var(--laranja);
+  border-bottom: 3px solid var(--laranja-escuro);
+  color: var(--cinza-escuro);
+  font-family: OpenSansBold;
+  cursor: pointer;
+}
+
+#produtos button:hover {
+  background-color: #f4b500;
+  border-bottom: 3px solid var(--laranja);
+}
+
+.c-parallax {
+  position: relative;
+  box-sizing: border-box;
+  transform-style: inherit;
+}
+
+
+/* Section Resultados */
+
+#resultados {
+  background: var(--cinza-escuro);
+}
+
+#resultados div.background {
+  background: url("../../assets/img/criancas.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  height: 450px;
+}
+
+#resultados div.col-4 {
+  color: var(--laranja-claro);
+  height: 308px;
+  margin-left: -3px;
+}
+
+#resultados span.plus {
+  color: var(--laranja);
+  font-size: 80px;
+  font-family: OpenSansLight;
+}
+
+#resultados span.cont {
+  color: var(--branca);
+  font-size: 80px;
+  font-family: OpenSansBold;
+}
+
+#resultados div.object {
+  font-family: OpenSansLight;
+}
+
+.title {
+  font-family: GothamXLight;
+  border-bottom: 2px solid var(--laranja-claro);
+  color: var(--branca);
+}
+
+.espaco {
+  height: 1000px;
 }
 
 
@@ -69,7 +200,7 @@ video#bg-vid {
 
 @media screen and (max-width: 992px) {
   #ct-video {
-    background: url(../../assets/img/mob.png) no-repeat;
+    background: url("../../assets/img/mob.png") no-repeat;
     background-size: auto 100%;
     background-position: center;
   }
