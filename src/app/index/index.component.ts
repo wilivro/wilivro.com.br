@@ -2,7 +2,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Element } from '@angular/compiler';
 declare var $: any;
-declare var mask: any;
 var on = true;
 
 @Component({
@@ -50,7 +49,7 @@ export class IndexComponent implements OnInit {
           var total = $(this).attr('data-total');
           var speed = $(this).attr('data-speed');
           var jump = $(this).attr('data-jump');
-          this.mask('000.000.000.000.000', { reverse: true })
+
           _this.contador(this, parseInt(inicial), parseInt(total), parseInt(speed), parseInt(jump));
         })
 

@@ -81,41 +81,6 @@ video#bg-vid {
   background-color: var(--verde-escuro);
 }
 
-#bg1,
-#bg2,
-#bg3 {
-  position: relative;
-  height: 505px;
-  padding: 150px 0;
-}
-
-#bg1 {
-  background: url("../../assets/img/tablet1.png") no-repeat;
-  background-size: 50%;
-  background-attachment: fixed;
-  background-position: 100% 50%;
-  background-color: var(--verde-escuro);
-  ;
-}
-
-#bg2 {
-  background: url("../../assets/img/tablet2.png") no-repeat;
-  background-size: 50%;
-  background-attachment: fixed;
-  background-position: 100% 50%;
-  border-top: 2px solid var(--verde);
-  border-bottom: 2px solid var(--verde);
-  background-color: var(--verde-escuro);
-}
-
-#bg3 {
-  background: url("../../assets/img/tablet3.png") no-repeat;
-  background-size: 50%;
-  background-attachment: fixed;
-  background-position: 100% 50%;
-  background-color: var(--verde-escuro);
-}
-
 #produtos h4 {
   color: var(--laranja-claro);
   --laranja: #fdc00f;
@@ -183,6 +148,39 @@ video#bg-vid {
 
 #resultados div.object {
   font-family: OpenSansLight;
+  font-size: 28px;
+  margin-top: -30px;
+  margin-left: 50px;
+}
+
+
+/* Section Clientes */
+
+#clientes {
+  background: var(--verde);
+}
+
+#clientes h1 {
+  color: var(--cinza-escuro);
+}
+
+#carouselClientes {
+  height: 300px;
+}
+
+#carouselClientes img.cliente {
+  width: 100%;
+}
+
+.ct-clientes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.carousel-inner {
+  height: 100%;
 }
 
 .title {
@@ -198,7 +196,7 @@ video#bg-vid {
 
 /* CSS Smartphones */
 
-@media screen and (max-width: 992px) {
+@media (max-width: 992px) {
   #ct-video {
     background: url("../../assets/img/mob.png") no-repeat;
     background-size: auto 100%;
@@ -216,5 +214,64 @@ video#bg-vid {
     font-family: GothamLight;
     font-size: 20px;
   }
+  /* Section Produtos */
+  #produtos h1 {
+    font-size: 33px;
+    margin-bottom: 50px;
+  }
+  #produto2 {
+    border-top: 2px solid var(--verde);
+    border-bottom: 2px solid var(--verde);
+  }
+  .c-parallax {
+    width: 100%;
+    max-width: 100%;
+    flex: 100%;
+    padding: 10%;
+    text-align: center;
+  }
+  /* Section Resultados */
+  #resultados h1 {
+    font-size: 30px;
+  }
   /* Final CSS Smartphones */
+}
+
+@media (min-width: 993px) {
+  #produto1,
+  #produto2,
+  #produto3 {
+    position: relative;
+    height: 505px;
+    padding: 150px 0;
+  }
+  #produto1 {
+    background: url("../../assets/img/tablet1.png") no-repeat;
+    background-size: 50%;
+    background-attachment: fixed;
+    background-position: 100% 50%;
+    background-color: var(--verde-escuro);
+    ;
+  }
+  #produto2 {
+    background: url("../../assets/img/tablet2.png") no-repeat;
+    background-size: 50%;
+    background-attachment: fixed;
+    background-position: 100% 50%;
+    border-top: 2px solid var(--verde);
+    border-bottom: 2px solid var(--verde);
+    background-color: var(--verde-escuro);
+  }
+  #produto3 {
+    background: url("../../assets/img/tablet3.png") no-repeat;
+    background-size: 50%;
+    background-attachment: fixed;
+    background-position: 100% 50%;
+    background-color: var(--verde-escuro);
+  }
+  .c-parallax {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
