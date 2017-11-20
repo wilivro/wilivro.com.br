@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
 
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,10 @@ import { IndexComponent } from './index/index.component';
   ],
   imports: [
     RouterModule.forRoot(ROUTES),
-    BrowserModule
+    BrowserModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB_IqTZfHLK-i9L-450YY60qPSxG5GwHBU'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
