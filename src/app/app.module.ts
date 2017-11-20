@@ -9,6 +9,7 @@ import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { OwlModule } from 'ngx-owl-carousel';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AgmCoreModule } from '@agm/core';
   imports: [
     RouterModule.forRoot(ROUTES),
     BrowserModule,
+    OwlModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB_IqTZfHLK-i9L-450YY60qPSxG5GwHBU'
     })
