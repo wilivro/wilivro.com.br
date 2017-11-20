@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Element } from '@angular/compiler';
 declare var $: any;
+
 var on = true;
 
 @Component({
@@ -10,6 +11,7 @@ var on = true;
   styleUrls: ['./index.component.css'],
   encapsulation: ViewEncapsulation.None
 })
+
 export class IndexComponent implements OnInit {
 
   public constructor(private titleService: Title) { }
@@ -24,7 +26,7 @@ export class IndexComponent implements OnInit {
   }
 
   contador(el: any, inicial: number, total: number, speed: number, jump: number) {
-    console.log(el, inicial, total, speed)
+
     setInterval(function () {
       if (inicial <= total) {
         el.innerHTML = inicial;
@@ -42,7 +44,7 @@ export class IndexComponent implements OnInit {
 
       if (!on) return;
 
-      if (window.scrollY > $('#resultados').offset().top - window.innerHeight / 2) {
+      if (window.scrollY > $('#resultado').offset().top - window.innerHeight / 2) {
 
         $('span.cont').map(function () {
           var inicial = $(this).attr('data-inicial');

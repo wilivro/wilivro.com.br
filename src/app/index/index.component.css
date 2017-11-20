@@ -115,42 +115,35 @@ video#bg-vid {
 }
 
 
-/* Section Resultados */
+/* Section Resultado */
 
-#resultados {
+#resultado {
   background: var(--cinza-escuro);
-}
-
-#resultados div.background {
   background: url("../../assets/img/criancas.jpg") no-repeat;
   background-size: cover;
   background-position: 50%;
-  height: 450px;
+  height: auto;
 }
 
-#resultados div.col-4 {
+#resultado div.col-12,
+#resultado div.col-sm-4 {
   color: var(--laranja-claro);
-  height: 308px;
+  height: auto;
   margin-left: -3px;
 }
 
-#resultados span.plus {
+#resultado span.plus {
   color: var(--laranja);
-  font-size: 80px;
   font-family: OpenSansLight;
 }
 
-#resultados span.cont {
+#resultado span.cont {
   color: var(--branca);
-  font-size: 80px;
   font-family: OpenSansBold;
 }
 
-#resultados div.object {
+#resultado div.object {
   font-family: OpenSansLight;
-  font-size: 28px;
-  margin-top: -30px;
-  margin-left: 50px;
 }
 
 
@@ -185,7 +178,6 @@ video#bg-vid {
 
 .title {
   font-family: GothamXLight;
-  border-bottom: 2px solid var(--laranja-claro);
   color: var(--branca);
 }
 
@@ -230,9 +222,28 @@ video#bg-vid {
     padding: 10%;
     text-align: center;
   }
-  /* Section Resultados */
-  #resultados h1 {
+  /* Section Resultado */
+  #resultado h1 {
     font-size: 30px;
+  }
+  #resultados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #resultado span.plus {
+    font-size: 60px;
+  }
+  #resultado span.cont {
+    font-size: 60px;
+  }
+  #resultado div.object {
+    font-size: 20px;
+    margin-top: -20px;
+    margin-left: 35px;
+  }
+  .b-title {
+    border-bottom: 2px solid var(--laranja-claro);
   }
   /* Final CSS Smartphones */
 }
@@ -251,7 +262,6 @@ video#bg-vid {
     background-attachment: fixed;
     background-position: 100% 50%;
     background-color: var(--verde-escuro);
-    ;
   }
   #produto2 {
     background: url("../../assets/img/tablet2.png") no-repeat;
@@ -269,9 +279,34 @@ video#bg-vid {
     background-position: 100% 50%;
     background-color: var(--verde-escuro);
   }
+  /* Section Resultado */
+  #resultado div.col-4 {
+    color: var(--laranja-claro);
+    height: 308px;
+    margin-left: -3px;
+  }
+  #resultado span.plus {
+    color: var(--laranja);
+    font-size: 80px;
+    font-family: OpenSansLight;
+  }
+  #resultado span.cont {
+    color: var(--branca);
+    font-size: 80px;
+    font-family: OpenSansBold;
+  }
+  #resultado div.object {
+    font-family: OpenSansLight;
+    font-size: 28px;
+    margin-top: -30px;
+    margin-left: 50px;
+  }
   .c-parallax {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
+  }
+  .title {
+    border-bottom: 2px solid var(--laranja-claro);
   }
 }
