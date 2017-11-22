@@ -229,6 +229,18 @@ video#bg-vid {
   border: 1px solid rgba(0, 0, 0, .15) !important;
   font-family: GothamLight;
   background: rgba(255, 255, 255, .75);
+  height: 126px;
+}
+
+#interessado button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #e6b653;
+  width: 100%;
+  padding: 15px 0;
+  cursor: pointer;
+  height: 58px;
+  margin-top: 10px;
 }
 
 input:-webkit-autofill,
