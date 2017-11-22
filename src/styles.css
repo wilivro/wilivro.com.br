@@ -28,6 +28,17 @@
   src: url(assets/font/Gotham-Bold.ttf);
 }
 
+:root {
+  --branca: #ffffff;
+  --cinza: #e7e6e3;
+  --cinza-escuro: #1c303b;
+  --laranja-claro: #e6b653;
+  --laranja: #fdc00f;
+  --laranja-escuro: #d7a30d;
+  --verde: #46b29d;
+  --verde-escuro: #3da490;
+}
+
 * {
   font-family: OpenSansBold, Arial, sans-serif;
   -webkit-touch-callout: none;

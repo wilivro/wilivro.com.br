@@ -1,10 +1,14 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Element } from '@angular/compiler';
+
+import { OwlCarousel } from 'ngx-owl-carousel';
 
 declare var $: any;
 
 var on = true;
+var PATH = "assets/img/home/clientes/";
+var isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ? true : false;
 
 @Component({
   selector: 'app-index',
@@ -13,12 +17,18 @@ var on = true;
   encapsulation: ViewEncapsulation.None
 })
 
-export class IndexComponent implements OnInit {
 
-  lat: number = -22.532313;
-  lng: number = -43.209118;
+export class IndexComponent implements OnInit {
+  iconUrl?: string;
+
+
+
+  lat: number = -22.532491;
+  lng: number = -43.209290;
+
   scrollwheel: boolean = false;
   zoom: number = 16;
+
   styles: any = [
     {
       elementType: "geometry",
@@ -149,6 +159,16 @@ export class IndexComponent implements OnInit {
     }
   ]
 
+  images = [
+    PATH + "logo_Gov_Ceara-01.png",
+    PATH + "logo_novo.png",
+    PATH + "logo_topo.png",
+    PATH + "ensinart-logo-01.png",
+    PATH + "pro-cidadania.png"
+  ]
+
+
+
   public constructor(private titleService: Title) { }
 
   public setTitle(newTitle: string) {
@@ -156,8 +176,56 @@ export class IndexComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (!isMobile) {
+      this.iconUrl = 'assets/img/icons/markerRJ.svg';
+    }
+
     this.setTitle('Wilivro');
     this.resultados();
+  }
+
+  ngAfterViewInit() {
+    var qtdItems: number = 5;
+
+    if (isMobile) {
+      qtdItems = 2;
+    }
+
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+      items: qtdItems,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true
+    });
+  }
+
+  ngClickRN(el) {
+    this.ngToggle(el);
+    if (!isMobile) {
+      this.iconUrl = 'assets/img/icons/markerRN.svg';
+    }
+    this.lat = -5.817215;
+    this.lng = -35.213243;
+  }
+
+  ngClickRJ(el) {
+    this.ngToggle(el);
+    if (!isMobile) {
+      this.iconUrl = 'assets/img/icons/markerRJ.svg';
+    }
+    this.lat = -22.532491;
+    this.lng = -43.209290;
+  }
+
+  ngToggle(el) {
+    if ($(el.path[1]).hasClass('active')) return;
+
+    console.log($('.btn.unit'))
+    $('.unit').toggleClass('active');
+
   }
 
   contador(el: any, inicial: number, total: number, speed: number, jump: number) {
@@ -171,9 +239,16 @@ export class IndexComponent implements OnInit {
 
   }
 
-
-
   private resultados() {
+
+    if (isMobile) {
+      $('span.cont').map(function () {
+        var total = $(this).attr('data-total');
+        $(this).html(total);
+      })
+      return;
+    }
+
     var _this = this;
     $(document).scroll(function () {
 
@@ -194,11 +269,7 @@ export class IndexComponent implements OnInit {
 
       }
 
-
     })
   }
-
-
-
 
 }
