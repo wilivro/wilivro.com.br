@@ -184,7 +184,7 @@
 
 <section id="wilivro">
   <div class="row col-12 mx-0 px-0">
-    <div class="btn unit active col-12 col-md-6" (click)="ngClickRJ($event)">
+    <div class="btn unit active col-12 col-md-6" (mouseenter)="ngClickRJ($event)">
       <h1>RJ</h1>
       <p>
         Av. Afrânio de Melo Franco, 333
@@ -193,7 +193,7 @@
         <br/>contato@wilivro.com.br
       </p>
     </div>
-    <div class="btn unit col-12 col-md-6" (click)="ngClickRN($event)">
+    <div class="btn unit col-12 col-md-6" (mouseenter)="ngClickRN($event)">
       <h1>RN</h1>
       <p>
         Rua Coronel José Guimarães, 136
@@ -207,5 +207,3 @@
     <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl"></agm-marker>
   </agm-map>
 </section>
-
-<div class="espaco"></div>

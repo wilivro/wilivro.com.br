@@ -10,12 +10,14 @@ import { IndexComponent } from './index/index.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { OwlModule } from 'ngx-owl-carousel';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    IndexComponent
+    IndexComponent,
+    FooterComponent
   ],
   imports: [
     RouterModule.forRoot(ROUTES),

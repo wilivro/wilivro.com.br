@@ -165,9 +165,7 @@ export class IndexComponent implements OnInit {
     PATH + "logo_topo.png",
     PATH + "ensinart-logo-01.png",
     PATH + "pro-cidadania.png"
-  ]
-
-
+  ];
 
   public constructor(private titleService: Title) { }
 
