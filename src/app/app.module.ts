@@ -11,6 +11,7 @@ import { IndexComponent } from './index/index.component';
 import { AgmCoreModule } from '@agm/core';
 import { OwlModule } from 'ngx-owl-carousel';
 import { FooterComponent } from './footer/footer.component';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FooterComponent } from './footer/footer.component';
     RouterModule.forRoot(ROUTES),
     BrowserModule,
     OwlModule,
+    Ng2PageScrollModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB_IqTZfHLK-i9L-450YY60qPSxG5GwHBU'
     })

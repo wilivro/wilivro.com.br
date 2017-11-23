@@ -1,6 +1,6 @@
 #footer .col-12 {
   font-family: GothamLight;
-  font-size: 16px;
+  font-size: 12px;
   color: #1c303b;
 }
 
@@ -8,6 +8,7 @@
 #footer i.fa-youtube-play {
   font-size: 30px;
   cursor: pointer;
+  color: #1c303b;
 }
 
 #footer i.fa-facebook-official:hover {
@@ -15,5 +16,5 @@
 }
 
 #footer i.fa-youtube-play:hover {
-  color: red
+  color: red;
 }

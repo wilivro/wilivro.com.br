@@ -180,6 +180,7 @@ export class IndexComponent implements OnInit {
 
     this.setTitle('Wilivro');
     this.resultados();
+    this.habilitarFormSubmit();
   }
 
   ngAfterViewInit() {
@@ -221,9 +222,35 @@ export class IndexComponent implements OnInit {
   ngToggle(el) {
     if ($(el.path[1]).hasClass('active')) return;
 
-    console.log($('.btn.unit'))
     $('.unit').toggleClass('active');
 
+  }
+
+  habilitarFormSubmit() {
+
+    var $contactForm = $('#contato');
+
+    $contactForm.submit(function (e) {
+      e.preventDefault();
+
+      $.ajax({
+        url: 'http://formspree.io/wilivro@wilivro.com.br',
+        type: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        beforeSend: function () {
+          $contactForm.find('#msgForm').html('<div class="alert alert-info">Enviando mensagem</div>');
+          $contactForm[0].reset();
+        },
+        success: function (data) {
+          $contactForm.find('.alert-info').html('<div class="alert alert-success">Mensagem enviada!</div>').removeClass('alert alert-info');
+        },
+        error: function (err) {
+          console.log(err)
+          $contactForm.find('.alert-info').html('<div class="alert alert-danger">Ocorreu um erro ao enviar sua mensagem, tente novamente mais tarde.</div>').removeClass('alert alert-info');
+        }
+      });
+    })
   }
 
   contador(el: any, inicial: number, total: number, speed: number, jump: number) {

@@ -233,6 +233,7 @@ video#bg-vid {
 }
 
 #interessado button {
+  font-family: GothamLight;
   background-color: transparent;
   color: #fff;
   border: 1px solid #e6b653;
