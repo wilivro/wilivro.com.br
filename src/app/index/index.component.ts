@@ -172,10 +172,7 @@ export class IndexComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (!isMobile) {
-      this.iconUrl = 'assets/img/icons/markerRJ.svg';
-    }
-
+    this.iconUrl = 'assets/img/icons/markerRJ.svg';
     this.setTitle('Wilivro');
     this.resultados();
     this.habilitarFormSubmit();
@@ -214,10 +211,7 @@ export class IndexComponent implements OnInit {
   }
 
   ngToggle(el) {
-    if ($(el.path[1]).hasClass('active')) return;
-
     $('.unit').toggleClass('active');
-
   }
 
   habilitarFormSubmit() {

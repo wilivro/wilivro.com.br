@@ -376,6 +376,10 @@ agm-map {
   .b-title {
     border-bottom: 2px solid #e6b653;
   }
+  #wilivro>.row>.btn:nth-of-type(1) {
+    border: none;
+    border-bottom: 2px solid #e7e6e3;
+  }
   /* Final CSS Smartphones */
 }
 
