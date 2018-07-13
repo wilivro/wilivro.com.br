@@ -179,15 +179,15 @@ export class IndexComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    var qtdItems: number = 5;
+    var qtdClienteView: number = 5;
 
     if (isMobile) {
-      qtdItems = 2;
+      qtdClienteView = 2;
     }
 
     var owl = $('.owl-carousel');
     owl.owlCarousel({
-      items: qtdItems,
+      items: qtdClienteView,
       loop: true,
       margin: 10,
       autoplay: true,
@@ -234,7 +234,6 @@ export class IndexComponent implements OnInit {
           $contactForm.find('.alert-info').html('<div class="alert alert-success">Mensagem enviada!</div>').removeClass('alert alert-info');
         },
         error: function (err) {
-          console.log(err)
           $contactForm.find('.alert-info').html('<div class="alert alert-danger">Ocorreu um erro ao enviar sua mensagem, tente novamente mais tarde.</div>').removeClass('alert alert-info');
         }
       });

@@ -12,13 +12,15 @@ import { AgmCoreModule } from '@agm/core';
 import { OwlModule } from 'ngx-owl-carousel';
 import { FooterComponent } from './footer/footer.component';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { ProjetosComponent } from './projetos/projetos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     IndexComponent,
-    FooterComponent
+    FooterComponent,
+    ProjetosComponent
   ],
   imports: [
     RouterModule.forRoot(ROUTES),

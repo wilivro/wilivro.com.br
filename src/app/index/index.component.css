@@ -69,6 +69,10 @@ video#bg-vid {
   color: #1c303b;
 }
 
+#sobre img {
+  width: 115px;
+}
+
 /* section Produtos */
 
 #produtos .container-fluid {
