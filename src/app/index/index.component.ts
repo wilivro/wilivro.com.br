@@ -17,11 +17,8 @@ var isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
   encapsulation: ViewEncapsulation.None
 })
 
-
 export class IndexComponent implements OnInit {
   iconUrl?: string;
-
-
 
   lat: number = -22.532491;
   lng: number = -43.209290;
@@ -160,12 +157,13 @@ export class IndexComponent implements OnInit {
   ]
 
   images = [
-    PATH + "logo_Gov_Ceara-01.png",
-    PATH + "logo_novo.png",
-    PATH + "logo_topo.png",
-    PATH + "ensinart-logo-01.png",
-    PATH + "pro-cidadania.png"
+    { src: PATH + "logo_assis.png", href: 'http://www.facbrasil.org.br/' },
+    { src: PATH + "logo_ceara.png", href: 'http://www.stds.ce.gov.br/' },
+    { src: PATH + "logo_piaui.png", href: 'http://www.seduc.pi.gov.br/' },
+    { src: PATH + "logo_pro-cidadania.png", href: 'http://procidadania.org.br/web/' },
+    { src: PATH + "logo-ensinart.png", href: 'http://ensinarteditora.com.br/' },
   ];
+
 
   public constructor(private titleService: Title) { }
 
@@ -203,18 +201,14 @@ export class IndexComponent implements OnInit {
 
   ngClickRN(el) {
     this.ngToggle(el);
-    if (!isMobile) {
-      this.iconUrl = 'assets/img/icons/markerRN.svg';
-    }
+    this.iconUrl = 'assets/img/icons/markerRN.svg';
     this.lat = -5.817215;
     this.lng = -35.213243;
   }
 
   ngClickRJ(el) {
     this.ngToggle(el);
-    if (!isMobile) {
-      this.iconUrl = 'assets/img/icons/markerRJ.svg';
-    }
+    this.iconUrl = 'assets/img/icons/markerRJ.svg';
     this.lat = -22.532491;
     this.lng = -43.209290;
   }

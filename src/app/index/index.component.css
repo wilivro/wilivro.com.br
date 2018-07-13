@@ -1,3 +1,9 @@
+/* CORES */
+
+.c-w {
+  color: #fff;
+}
+
 /*posição do video*/
 
 #ct-video {
@@ -21,7 +27,8 @@
 
 #ct-video .container h1 {
   font-family: GothamXLight;
-  font-size: 78px;
+  font-size: 70px;
+  text-align: center;
 }
 
 #ct-video .container div p {
@@ -50,7 +57,6 @@ video#bg-vid {
   z-index: -100;
 }
 
-
 /* Section Sobre */
 
 #sobre h1 {
@@ -62,7 +68,6 @@ video#bg-vid {
   font-size: 22px;
   color: #1c303b;
 }
-
 
 /* section Produtos */
 
@@ -97,12 +102,15 @@ video#bg-vid {
   border-bottom: 3px solid #fdc00f;
 }
 
+#produtos button.off {
+  cursor: not-allowed;
+}
+
 .c-parallax {
   position: relative;
   box-sizing: border-box;
   transform-style: inherit;
 }
-
 
 /* Section Resultado */
 
@@ -134,7 +142,6 @@ video#bg-vid {
 #resultado div.object {
   font-family: OpenSansLight;
 }
-
 
 /* Section Clientes */
 
@@ -168,7 +175,6 @@ video#bg-vid {
 #clientes .owl-dots {
   margin-top: -20px;
 }
-
 
 /* Section Interessado */
 
@@ -233,15 +239,24 @@ video#bg-vid {
 }
 
 #interessado button {
-  font-family: GothamLight;
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #e6b653;
+  background-color: #fdc00f;
+  border-bottom: 3px solid #d7a30d;
+  color: #1c303b;
+  cursor: pointer;
+  font-family: GothamBold;
   width: 100%;
   padding: 15px 0;
-  cursor: pointer;
   height: 58px;
   margin-top: 10px;
+}
+
+#interessado button:hover {
+  background-color: #f4b500;
+  border-bottom: 3px solid #fdc00f;
+}
+
+#interessado button.off {
+  cursor: not-allowed;
 }
 
 input:-webkit-autofill,
@@ -250,7 +265,6 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
-
 
 /* Section Wilivro mapa */
 
@@ -294,6 +308,18 @@ agm-map {
   color: #fff;
 }
 
+/* Section Resultado Todas Resoluções */
+
+#resultados>div {
+  margin-top: 40px;
+}
+
+#resultado span.cont {
+  color: #fff;
+  font-size: 80px;
+  height: 80px;
+  font-family: OpenSansBold;
+}
 
 /* CSS Smartphones */
 
@@ -309,7 +335,7 @@ agm-map {
   #ct-video .container h1 {
     text-align: center;
     font-family: GothamXLight;
-    font-size: 50px;
+    font-size: 45px;
   }
   #ct-video .container div p {
     font-family: GothamLight;
@@ -340,16 +366,8 @@ agm-map {
     flex-direction: column;
     align-items: center;
   }
-  #resultado span.plus {
-    font-size: 60px;
-  }
-  #resultado span.cont {
-    font-size: 60px;
-  }
   #resultado div.object {
     font-size: 20px;
-    margin-top: -20px;
-    margin-left: 35px;
   }
   /* Section Interessado */
   #interessado h1 {
@@ -403,16 +421,9 @@ agm-map {
     font-size: 80px;
     font-family: OpenSansLight;
   }
-  #resultado span.cont {
-    color: #fff;
-    font-size: 80px;
-    font-family: OpenSansBold;
-  }
   #resultado div.object {
     font-family: OpenSansLight;
     font-size: 28px;
-    margin-top: -30px;
-    margin-left: 50px;
   }
   .c-parallax {
     display: flex;
