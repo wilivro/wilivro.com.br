@@ -240,14 +240,15 @@ export class IndexComponent implements OnInit {
     })
   }
 
-  contador(el: any, inicial: number, total: number, speed: number, jump: number) {
+  contador(ele, count_to, timer, i) {
 
-    setInterval(function () {
-      if (inicial <= total) {
-        el.innerHTML = inicial;
-      }
-      inicial = inicial + jump;
-    }, speed);
+    if (i > count_to) {
+      return;
+    }
+    ele.text(i.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1."));
+    i += 1;
+    /*console.log(timer);*/
+    setTimeout(function () { this.contador(ele, count_to, timer, i) }, timer);
 
   }
 
@@ -268,13 +269,26 @@ export class IndexComponent implements OnInit {
 
       if (window.scrollY > $('#resultado').offset().top - window.innerHeight / 2) {
 
-        $('span.cont').map(function () {
-          var inicial = $(this).attr('data-inicial');
-          var total = $(this).attr('data-total');
-          var speed = $(this).attr('data-speed');
-          var jump = $(this).attr('data-jump');
+        const tempo_intervalo = 5; //ms -> define a velocidade da animação
+        const tempo = 2000; //ms -> define o tempo total da animaçao
 
-          _this.contador(this, parseInt(inicial), parseInt(total), parseInt(speed), parseInt(jump));
+        $('span.cont').each(function () {
+          let count_to = parseInt($(this).data('countTo'));
+          let intervalos = tempo / tempo_intervalo; //quantos passos de animação tem
+          let incremento = count_to / intervalos; //quanto cada contador deve aumentar
+          let valor = 0;
+          let el = $(this);
+
+          let timer = setInterval(function () {
+            if (valor >= count_to) { //se já contou tudo tem de parar o timer
+              valor = count_to;
+              clearInterval(timer);
+            }
+
+            let texto = valor.toFixed(0).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+            el.text(texto);
+            valor += incremento;
+          }, tempo_intervalo);
         })
 
         on = false;

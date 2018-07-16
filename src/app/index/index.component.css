@@ -27,7 +27,7 @@
 
 #ct-video .container h1 {
   font-family: GothamXLight;
-  font-size: 70px;
+  font-size: 65px;
   text-align: center;
 }
 
@@ -76,7 +76,7 @@ video#bg-vid {
 /* section Produtos */
 
 #produtos .container-fluid {
-  background-color: #3da490;
+  background-color: #2590be;
 }
 
 #produtos h4 {
@@ -89,7 +89,6 @@ video#bg-vid {
   font-family: OpenSansLight;
   font-size: 19px;
   font-weight: 100;
-  color: #fff;
 }
 
 #produtos button {
@@ -280,13 +279,6 @@ agm-map {
   overflow: hidden;
 }
 
-#wilivro .teste {
-  position: relative;
-  height: 100px;
-  width: 100%;
-  z-index: 1;
-}
-
 #wilivro .btn {
   z-index: 12;
   height: 150px;
@@ -313,10 +305,6 @@ agm-map {
 }
 
 /* Section Resultado Todas Resoluções */
-
-#resultados>div {
-  margin-top: 40px;
-}
 
 #resultado span.cont {
   color: #fff;
@@ -350,9 +338,12 @@ agm-map {
     font-size: 33px;
     margin-bottom: 50px;
   }
+  #produto1,
+  #produto3 {
+    color: #fff;
+  }
   #produto2 {
-    border-top: 2px solid #46b29d;
-    border-bottom: 2px solid #46b29d;
+    background: #fff;
   }
   .c-parallax {
     width: 100%;
@@ -362,6 +353,10 @@ agm-map {
     text-align: center;
   }
   /* Section Resultado */
+  #resultados>div {
+    margin-top: 40px;
+    font-size: 80px;
+  }
   #resultado h1 {
     font-size: 30px;
   }
@@ -400,23 +395,24 @@ agm-map {
     background-size: 50%;
     background-attachment: fixed;
     background-position: 100% 50%;
-    background-color: #3da490;
+    color: #fff;
+    background-color: #148ec3;
   }
   #produto2 {
     background: url("../../assets/img/tablet2.png") no-repeat;
     background-size: 50%;
     background-attachment: fixed;
     background-position: 100% 50%;
-    border-top: 2px solid #46b29d;
-    border-bottom: 2px solid #46b29d;
-    background-color: #3da490;
+    color: #172a30;
+    background-color: #fff;
   }
   #produto3 {
     background: url("../../assets/img/tablet3.png") no-repeat;
     background-size: 50%;
     background-attachment: fixed;
     background-position: 100% 50%;
-    background-color: #3da490;
+    color: #fff;
+    background-color: #148ec3;
   }
   /* Section Resultado */
   #resultado div.col-4 {
