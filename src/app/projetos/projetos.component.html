@@ -1,5 +1,54 @@
-<section id="projetos">
-  <p>
-    projetos works!
-  </p>
+<section id="projetos" class="d-flex justify-content-center align-items-center">
+  <div class="container-fluid">
+    <div class="col-lg-8 offset-lg-2 text-center">
+      Desde 2003 temos participado de diversas iniciativas dos setores público e privado na área de educação.
+      <br> Os projetos que usam ou usaram tecnologia Wilivro abrangem o universo de centenas de escolas e instituições, espalhadas
+      por todo o Brasil. São mais de 200.000 crianças, jovens, adultos e idosos impactados pelo nosso trabalho.
+      <br> Conheça a seguir alguns dos projetos que usaram nossas soluções.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div id="formacaoEmpreendedora" class="container-fluid d-flex px-0">
+    <div class="d-flex align-items-center">
+      <div class="col-lg-6 offset-lg-1">
+        <img src="./../assets/img/projetos/formacaoEmpreendedora/icon.svg">
+        <h1>Formação Empreendedora</h1>
+        <p>Objetiva proporcionar aos alunos do Ensino Médio das escolas públicas, via internet e utilizando a tecnologia Wilivro,
+          inclusão digital, qualificação em empreendedorismo e plano de negócio. Os alunos que apresentam os melhores planos
+          recebem prêmios e financimanto de microcrédito para a montagem do próprio negócio.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="carouselExampleIndicators" class="carousel slide d-lg-none" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item justify-content-center align-items-center" *ngFor="let image of projetos.formacaoEmpreendedora;let i=index; let isFirst = first"
+        [class.active]="isFirst">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="{{image.src}}" alt="First slide">
+          <div>
+            <h4>{{image.projeto}}</h4>
+            <h5>Participantes: {{image.participantes}}</h5>
+            <h5>Local: {{image.local}}</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+
+
 </section>

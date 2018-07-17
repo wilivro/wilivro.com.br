@@ -1,3 +1,55 @@
-#projetos p {
+#projetos {
   padding-top: 115px;
+  background: #1c303b;
+  background: url("../../assets/img/projetos/topo.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  height: 380px;
+}
+
+#projetos div.text-center {
+  font-size: 21px;
+  font-family: GothamLight;
+}
+
+#formacaoEmpreendedora p {
+  font-size: 19px;
+  font-family: GothamLight;
+}
+
+#projetos>div.container-fluid {
+  color: var(--branca);
+}
+
+.projeto h4 {
+  font-size: 19px;
+  font-family: GothamBold;
+}
+
+.projeto h5 {
+  font-size: 18px;
+  font-family: OpenSans;
+}
+
+#formacaoEmpreendedora {
+  background: #1c303b;
+  background: url("../../assets/img/projetos/formacaoEmpreendedora/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: 100% 60%;
+  height: 380px;
+  color: var(--branca);
+}
+
+#formacaoEmpreendedora img {
+  width: 100px;
+  height: 82px;
+}
+
+#formacaoEmpreendedora h1 {
+  color: #cb613f;
+  padding: 5px;
+  border: 1px solid #cb613f;
+  border-radius: 2px;
+  display: table;
+  font-family: GothamBold;
 }
