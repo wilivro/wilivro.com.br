@@ -1,8 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Element } from '@angular/compiler';
-
-import { OwlCarousel } from 'ngx-owl-carousel';
 
 declare var $: any;
 
@@ -215,25 +212,26 @@ export class IndexComponent implements OnInit {
   }
 
   habilitarFormSubmit() {
-
     var $contactForm = $('#contato');
 
     $contactForm.submit(function (e) {
       e.preventDefault();
 
       $.ajax({
-        url: 'http://formspree.io/wilivro@wilivro.com.br',
+        url: 'https://formspree.io/wilivro@wilivro.com.br',
         type: 'POST',
         data: $(this).serialize(),
         dataType: 'json',
         beforeSend: function () {
           $contactForm.find('#msgForm').html('<div class="alert alert-info">Enviando mensagem</div>');
           $contactForm[0].reset();
+
         },
         success: function (data) {
           $contactForm.find('.alert-info').html('<div class="alert alert-success">Mensagem enviada!</div>').removeClass('alert alert-info');
         },
         error: function (err) {
+          console.log(err)
           $contactForm.find('.alert-info').html('<div class="alert alert-danger">Ocorreu um erro ao enviar sua mensagem, tente novamente mais tarde.</div>').removeClass('alert alert-info');
         }
       });
@@ -265,7 +263,12 @@ export class IndexComponent implements OnInit {
     var _this = this;
     $(document).scroll(function () {
 
+      if (window.scrollY > $('#sobre').offset().top - window.innerHeight / 2) {
+        console.log('sobre')
+      }
+
       if (!on) return;
+
 
       if (window.scrollY > $('#resultado').offset().top - window.innerHeight / 2) {
 

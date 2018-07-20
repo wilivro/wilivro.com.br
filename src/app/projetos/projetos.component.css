@@ -4,12 +4,13 @@
   background: url("../../assets/img/projetos/topo.jpg") no-repeat;
   background-size: cover;
   background-position: 50%;
-  height: 380px;
+  min-height: 380px;
 }
 
 #projetos div.text-center {
   font-size: 21px;
   font-family: GothamLight;
+  padding: 20px;
 }
 
 #formacaoEmpreendedora p {
@@ -35,8 +36,8 @@
   background: #1c303b;
   background: url("../../assets/img/projetos/formacaoEmpreendedora/bg.jpg") no-repeat;
   background-size: cover;
-  background-position: 100% 60%;
-  height: 380px;
+  background-position: 100% 50%;
+  min-height: 380px;
   color: var(--branca);
 }
 

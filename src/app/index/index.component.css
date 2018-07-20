@@ -1,7 +1,7 @@
 /* CORES */
 
 .c-w {
-  color: #fff;
+  color: var(--branca);
 }
 
 /*posição do video*/
@@ -22,7 +22,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--branca);
 }
 
 #ct-video .container h1 {
@@ -76,7 +76,7 @@ video#bg-vid {
 /* section Produtos */
 
 #produtos .container-fluid {
-  background-color: #2590be;
+  background-color: var(--azul);
 }
 
 #produtos h4 {
@@ -138,7 +138,7 @@ video#bg-vid {
 }
 
 #resultado span.cont {
-  color: #fff;
+  color: var(--branca);
   font-family: OpenSansBold;
 }
 
@@ -192,7 +192,7 @@ video#bg-vid {
 #interessado p {
   margin: 50px 0;
   font-size: 22px;
-  color: #fff;
+  color: var(--branca);
   font-family: GothamLight;
 }
 
@@ -301,13 +301,13 @@ agm-map {
 
 .title {
   font-family: GothamXLight;
-  color: #fff;
+  color: var(--branca);
 }
 
 /* Section Resultado Todas Resoluções */
 
 #resultado span.cont {
-  color: #fff;
+  color: var(--branca);
   font-size: 80px;
   height: 80px;
   font-family: OpenSansBold;
@@ -340,10 +340,10 @@ agm-map {
   }
   #produto1,
   #produto3 {
-    color: #fff;
+    color: var(--branca);
   }
   #produto2 {
-    background: #fff;
+    background: var(--branca);
   }
   .c-parallax {
     width: 100%;
@@ -395,24 +395,24 @@ agm-map {
     background-size: 50%;
     background-attachment: fixed;
     background-position: 100% 50%;
-    color: #fff;
-    background-color: #148ec3;
+    color: var(--branca);
+    background-color: var(--azul);
   }
   #produto2 {
     background: url("../../assets/img/tablet2.png") no-repeat;
     background-size: 50%;
     background-attachment: fixed;
     background-position: 100% 50%;
-    color: #172a30;
-    background-color: #fff;
+    color: var(--cinza-escuro);
+    background-color: var(--branca);
   }
   #produto3 {
     background: url("../../assets/img/tablet3.png") no-repeat;
     background-size: 50%;
     background-attachment: fixed;
     background-position: 100% 50%;
-    color: #fff;
-    background-color: #148ec3;
+    color: var(--branca);
+    background-color: var(--azul);
   }
   /* Section Resultado */
   #resultado div.col-4 {
