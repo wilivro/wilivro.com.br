@@ -13,44 +13,80 @@
   padding: 20px;
 }
 
-#formacaoEmpreendedora p {
-  font-size: 19px;
-  font-family: GothamLight;
-}
-
 #projetos>div.container-fluid {
   color: var(--branca);
 }
 
-.projeto h4 {
+.projeto-tema p {
   font-size: 19px;
-  font-family: GothamBold;
+  font-family: GothamLight;
 }
 
-.projeto h5 {
-  font-size: 18px;
-  font-family: OpenSans;
-}
-
-#formacaoEmpreendedora {
+.projeto-tema {
   background: #1c303b;
-  background: url("../../assets/img/projetos/formacaoEmpreendedora/bg.jpg") no-repeat;
   background-size: cover;
   background-position: 100% 50%;
   min-height: 380px;
   color: var(--branca);
 }
 
-#formacaoEmpreendedora img {
+.projeto-tema img {
   width: 100px;
   height: 82px;
+  margin-bottom: 10px;
 }
 
-#formacaoEmpreendedora h1 {
+.projeto-tema h1 {
   color: #cb613f;
   padding: 5px;
   border: 1px solid #cb613f;
   border-radius: 2px;
   display: table;
   font-family: GothamBold;
+}
+
+.projeto {
+  padding: 20px 15px;
+}
+
+.projeto img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  transition: ease 0.5s all;
+}
+
+.projeto .d-flex:hover {
+  cursor: pointer;
+}
+
+.projeto .d-flex:hover img {
+  -webkit-filter: sepia(0%);
+  filter: sepia(0%);
+}
+
+.projeto .carousel-control-prev span,
+.projeto .carousel-control-next span {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background-size: 50% 50%;
+}
+
+.projeto .carousel-control-prev span {
+  background-position: 12px;
+}
+
+.projeto .carousel-control-next span {
+  background-position: 14px;
+}
+
+.projeto h4 {
+  font-size: 17px;
+  font-family: GothamBold;
+  margin-bottom: 5px;
+}
+
+.projeto h5 {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-family: OpenSans;
 }
