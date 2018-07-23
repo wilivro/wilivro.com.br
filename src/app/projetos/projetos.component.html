@@ -13,17 +13,18 @@
 </section>
 
 <section *ngFor="let projeto of todosProjetos">
-  <div class="projeto-tema container-fluid d-flex px-0" [ngStyle]="{ 'background-image': 'url(./../assets/img/projetos/' + projeto.folder + '/bg.jpg)'}">
+  <div class="projeto-tema container-fluid d-flex px-0" [ngStyle]="{ 'background-image': 'url(./assets/img/projetos/' + projeto.folder + '/bg.jpg)'}">
     <div class="d-flex align-items-center col-12">
       <div class="col-lg-6 offset-lg-1 my-5 ">
-        <img src="./../assets/img/projetos/{{projeto.folder}}/icon.svg ">
+        <img src="./assets/img/projetos/{{projeto.folder}}/icon.svg ">
         <h1>{{projeto.nome}}</h1>
         <p>{{projeto.desc}}</p>
       </div>
     </div>
   </div>
 
-  <div class="container-fluid d-md-block d-lg-block d-xs-none d-sm-none px-0 ">
+  <!-- <div class="container-fluid d-md-block d-lg-block d-xs-none d-sm-none px-0 "> -->
+  <div class="container-fluid d-block px-0 ">
     <div class="d-flex justify-content-beteween align-items-center flex-wrap ">
       <div class="projeto justify-content-center align-items-center col-md-6 col-lg-4 " *ngFor="let projeto of projeto.projetos; ">
         <div class="d-flex align-items-center col-md-12 col-lg-12 ">
@@ -38,7 +39,7 @@
     </div>
   </div>
 
-  <div id="carouselProjetos " class="projeto carousel slide d-md-none d-lg-none " data-ride="carousel ">
+  <!-- <div id="carouselProjetos " class="projeto carousel slide d-md-none d-lg-none " data-ride="carousel ">
     <div class="carousel-inner ">
       <div class="carousel-item justify-content-center align-items-center " *ngFor="let projeto of projeto.projetos;let
     i=index; let isFirst=f irst " [class.active]="isFirst ">
@@ -61,5 +62,5 @@
       <span class="btn-carrousel carousel-control-next-icon " aria-hidden="true "></span>
       <span class="sr-only ">Next</span>
     </a>
-  </div>
+  </div> -->
 </section>

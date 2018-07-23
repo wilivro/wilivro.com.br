@@ -1,7 +1,7 @@
 #projetos {
   padding-top: 115px;
   background: #1c303b;
-  background: url("../../assets/img/projetos/topo.jpg") no-repeat;
+  background: url("/assets/img/projetos/topo.jpg") no-repeat;
   background-size: cover;
   background-position: 50%;
   min-height: 380px;
@@ -31,8 +31,8 @@
 }
 
 .projeto-tema img {
-  width: 100px;
-  height: 82px;
+  width: 80px;
+  height: 80px;
   margin-bottom: 10px;
 }
 

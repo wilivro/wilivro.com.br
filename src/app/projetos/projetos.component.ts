@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 declare var $: any;
 
-var PATH = "../assets/img/projetos/";
+var PATH = "./assets/img/projetos/";
 
 @Component({
   selector: 'app-projetos',
