@@ -28,10 +28,23 @@
     <div class="d-flex justify-content-beteween align-items-center flex-wrap ">
       <div class="projeto justify-content-center align-items-center col-md-6 col-lg-4 " *ngFor="let projeto of projeto.projetos; ">
         <div class="d-flex align-items-center col-md-12 col-lg-12 ">
-          <img src="{{projeto.src}}" alt="{{projeto.local}} ">
+          <div *ngIf="projeto.href != null; then thenTemplateProjeto else elseTemplateProjeto">
+            Aqui nunca será mostrado
+          </div>
+
+          <ng-template #thenTemplateProjeto>
+            <a href="{{projeto.href}}" target="_blank">
+              <img src="{{projeto.src}}" alt="{{projeto.local}} ">
+            </a>
+          </ng-template>
+
+          <ng-template #elseTemplateProjeto>
+            <img src="{{projeto.src}}" alt="{{projeto.local}} ">
+          </ng-template>
+
           <div>
             <h4>{{projeto.nome}}</h4>
-            <h5>Participantes: {{projeto.participantes}}</h5>
+            <!-- <h5>Participantes: {{projeto.participantes}}</h5> -->
             <h5>Local: {{projeto.local}}</h5>
           </div>
         </div>
