@@ -196,8 +196,8 @@ export class IndexComponent implements OnInit {
   ngClickRN(el) {
     this.ngToggle(el);
     this.iconUrl = 'assets/img/icons/markerRN.svg';
-    this.lat = -5.817215;
-    this.lng = -35.213243;
+    this.lat = -5.8237117;
+    this.lng = -35.2080235;
   }
 
   ngClickRJ(el) {
