@@ -620,7 +620,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#projetos {\n  padding-top: 115px;\n  background: #1c303b;\n  background: url(\"/assets/img/projetos/topo.jpg\") no-repeat;\n  background-size: cover;\n  background-position: 50%;\n  min-height: 380px;\n}\n\n#projetos div.text-center {\n  font-size: 21px;\n  font-family: GothamLight;\n  padding: 20px;\n}\n\n#projetos>div.container-fluid {\n  color: var(--branca);\n  color: var(--branca);\n}\n\n.projeto-tema p {\n  font-size: 19px;\n  font-family: GothamLight;\n}\n\n.projeto-tema {\n  background: #1c303b;\n  background-size: cover;\n  background-position: 100% 50%;\n  min-height: 380px;\n  color: var(--branca);\n  color: var(--branca);\n}\n\n.projeto-tema img {\n  width: 80px;\n  height: 80px;\n  margin-bottom: 10px;\n}\n\n.projeto-tema h1 {\n  color: #cb613f;\n  padding: 5px;\n  border: 1px solid #cb613f;\n  border-radius: 2px;\n  display: table;\n  font-family: GothamBold;\n}\n\n.projeto {\n  padding: 20px 15px;\n}\n\n.projeto img {\n  -webkit-filter: sepia(100%);\n  filter: sepia(100%);\n  transition: ease 0.5s all;\n}\n\n.projeto .d-flex:hover {\n  cursor: pointer;\n}\n\n.projeto .d-flex:hover img {\n  -webkit-filter: sepia(0%);\n  filter: sepia(0%);\n}\n\n.projeto .carousel-control-prev span,\n.projeto .carousel-control-next span {\n  background-color: rgba(0, 0, 0, 0.2);\n  padding: 20px;\n  background-size: 50% 50%;\n}\n\n.projeto .carousel-control-prev span {\n  background-position: 12px;\n}\n\n.projeto .carousel-control-next span {\n  background-position: 14px;\n}\n\n.projeto h4 {\n  font-size: 17px;\n  font-family: GothamBold;\n  margin-bottom: 5px;\n}\n\n.projeto h5 {\n  margin-bottom: 5px;\n  font-size: 14px;\n  font-family: OpenSans;\n}\n", ""]);
+exports.push([module.i, "#projetos {\n  padding-top: 115px;\n  background: #1c303b;\n  background: url(\"/assets/img/projetos/topo.jpg\") no-repeat;\n  background-size: cover;\n  background-position: 50%;\n  min-height: 380px;\n}\n\n#projetos div.text-center {\n  font-size: 21px;\n  font-family: GothamLight;\n  padding: 20px;\n}\n\n#projetos>div.container-fluid {\n  color: var(--branca);\n  color: var(--branca);\n}\n\n.projeto-tema p {\n  font-size: 19px;\n  font-family: GothamLight;\n}\n\n.projeto-tema {\n  background: #1c303b;\n  background-size: cover;\n  background-position: 100% 50%;\n  min-height: 380px;\n  color: var(--branca);\n  color: var(--branca);\n}\n\n.projeto-tema img {\n  width: 80px;\n  height: 80px;\n  margin-bottom: 10px;\n}\n\n.projeto-tema h1 {\n  color: #cb613f;\n  padding: 5px;\n  border: 1px solid #cb613f;\n  border-radius: 2px;\n  display: table;\n  font-family: GothamBold;\n}\n\n.projeto {\n  padding: 20px 15px;\n}\n\n.projeto img {\n  -webkit-filter: sepia(100%);\n  filter: sepia(100%);\n  transition: ease 0.5s all;\n}\n\n.projeto .d-flex:hover {\n  cursor: pointer;\n}\n\n.projeto .d-flex:hover img {\n  -webkit-filter: sepia(0%);\n  filter: sepia(0%);\n}\n\n.projeto .carousel-control-prev span,\n.projeto .carousel-control-next span {\n  background-color: rgba(0, 0, 0, 0.2);\n  padding: 20px;\n  background-size: 50% 50%;\n}\n\n.projeto .carousel-control-prev span {\n  background-position: 12px;\n}\n\n.projeto .carousel-control-next span {\n  background-position: 14px;\n}\n\n.projeto h4 {\n  font-size: 17px;\n  font-family: GothamBold;\n  margin-bottom: 5px;\n}\n\n.projeto h5 {\n  margin-bottom: 5px;\n  font-size: 14px;\n  font-family: OpenSans;\n}\n\n.c-black, .c-black:hover, \n.c-black:active, .c-black:focus {\n  text-decoration: none;\n  color: #000;\n}\n", ""]);
 
 // exports
 
@@ -633,7 +633,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/projetos/projetos.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section id=\"projetos\" class=\"d-flex justify-content-center align-items-center\">\n  <div class=\"container-fluid\">\n    <div class=\"col-lg-8 offset-lg-2 text-center my-5\">\n      Desde 2003 temos participado de diversas iniciativas dos setores público e privado na área de educação.\n      <br> Os projetos que usam ou usaram tecnologia Wilivro abrangem o universo de centenas de escolas e instituições, espalhadas\n      por todo o Brasil. São mais de 200.000 crianças, jovens, adultos e idosos impactados pelo nosso trabalho.\n      <br> Conheça a seguir alguns dos projetos que usaram nossas soluções.\n    </div>\n    <p>\n\n    </p>\n  </div>\n</section>\n\n<section *ngFor=\"let projeto of todosProjetos\">\n  <div class=\"projeto-tema container-fluid d-flex px-0\" [ngStyle]=\"{ 'background-image': 'url(./assets/img/projetos/' + projeto.folder + '/bg.jpg)'}\">\n    <div class=\"d-flex align-items-center col-12\">\n      <div class=\"col-lg-6 offset-lg-1 my-5 \">\n        <img src=\"./assets/img/projetos/{{projeto.folder}}/icon.svg \">\n        <h1>{{projeto.nome}}</h1>\n        <p>{{projeto.desc}}</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- <div class=\"container-fluid d-md-block d-lg-block d-xs-none d-sm-none px-0 \"> -->\n  <div class=\"container-fluid d-block px-0 \">\n    <div class=\"d-flex justify-content-beteween align-items-center flex-wrap \">\n      <div class=\"projeto justify-content-center align-items-center col-md-6 col-lg-4 \" *ngFor=\"let projeto of projeto.projetos; \">\n        <div class=\"d-flex align-items-center col-md-12 col-lg-12 \">\n          <div *ngIf=\"projeto.href != null; then thenTemplateProjeto else elseTemplateProjeto\">\n            Aqui nunca será mostrado\n          </div>\n\n          <ng-template #thenTemplateProjeto>\n            <a href=\"{{projeto.href}}\" target=\"_blank\">\n              <img src=\"{{projeto.src}}\" alt=\"{{projeto.local}} \">\n            </a>\n          </ng-template>\n\n          <ng-template #elseTemplateProjeto>\n            <img src=\"{{projeto.src}}\" alt=\"{{projeto.local}} \">\n          </ng-template>\n\n          <div>\n            <h4>{{projeto.nome}}</h4>\n            <!-- <h5>Participantes: {{projeto.participantes}}</h5> -->\n            <h5>Local: {{projeto.local}}</h5>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- <div id=\"carouselProjetos \" class=\"projeto carousel slide d-md-none d-lg-none \" data-ride=\"carousel \">\n    <div class=\"carousel-inner \">\n      <div class=\"carousel-item justify-content-center align-items-center \" *ngFor=\"let projeto of projeto.projetos;let\n    i=index; let isFirst=f irst \" [class.active]=\"isFirst \">\n        <div class=\"d-flex justify-content-center align-items-center \">\n          <img src=\"{{this.PATH}}+{{projeto.folder}}+{{projeto.src}} \" alt=\"{{projeto.local}} \">\n          <div>\n            <h4>{{projeto.nome}}</h4>\n            <h5>Participantes: {{projeto.participantes}}</h5>\n            <h5>Local: {{projeto.local}}</h5>\n          </div>\n        </div>\n      </div>\n\n    </div>\n    <a class=\"carousel-control-prev \" href=\"#carouselProjetos \" role=\"button \" data-slide=\"prev \">\n      <span class=\"btn-carrousel carousel-control-prev-icon \" aria-hidden=\"true \"></span>\n      <span class=\"sr-only \">Previous</span>\n    </a>\n    <a class=\"carousel-control-next \" href=\"#carouselProjetos \" role=\"button \" data-slide=\"next \">\n      <span class=\"btn-carrousel carousel-control-next-icon \" aria-hidden=\"true \"></span>\n      <span class=\"sr-only \">Next</span>\n    </a>\n  </div> -->\n</section>\n"
+module.exports = "<section id=\"projetos\" class=\"d-flex justify-content-center align-items-center\">\n    <div class=\"container-fluid\">\n      <div class=\"col-lg-8 offset-lg-2 text-center my-5\">\n        Desde 2003 temos participado de diversas iniciativas dos setores público e privado na área de educação.\n        <br> Os projetos que usam ou usaram tecnologia Wilivro abrangem o universo de centenas de escolas e instituições, espalhadas\n        por todo o Brasil. São mais de 200.000 crianças, jovens, adultos e idosos impactados pelo nosso trabalho.\n        <br> Conheça a seguir alguns dos projetos que usaram nossas soluções.\n      </div>\n      <p>\n  \n      </p>\n    </div>\n  </section>\n  \n  <section *ngFor=\"let projeto of todosProjetos\">\n    <div class=\"projeto-tema container-fluid d-flex px-0\" [ngStyle]=\"{ 'background-image': 'url(./assets/img/projetos/' + projeto.folder + '/bg.jpg)'}\">\n      <div class=\"d-flex align-items-center col-12\">\n        <div class=\"col-lg-6 offset-lg-1 my-5 \">\n          <img src=\"./assets/img/projetos/{{projeto.folder}}/icon.svg \">\n          <h1>{{projeto.nome}}</h1>\n          <p>{{projeto.desc}}</p>\n        </div>\n      </div>\n    </div>\n  \n    <!-- <div class=\"container-fluid d-md-block d-lg-block d-xs-none d-sm-none px-0 \"> -->\n    <div class=\"container-fluid d-block px-0 \">\n      <div class=\"d-flex justify-content-beteween align-items-center flex-wrap \">\n        <div class=\"projeto justify-content-center align-items-center col-md-6 col-lg-4 \" *ngFor=\"let projeto of projeto.projetos; \">\n          <div class=\"d-flex align-items-center col-md-12 col-lg-12 \">\n            <a class=\"d-flex align-items-center c-black\" href=\"{{projeto.href}}\" target=\"_blank\">\n            <div *ngIf=\"projeto.href != null; then thenTemplateProjeto else elseTemplateProjeto\">\n              Aqui nunca será mostrado\n            </div>\n  \n            <ng-template #thenTemplateProjeto>\n                <img src=\"{{projeto.src}}\" alt=\"{{projeto.local}} \">\n              </ng-template>\n              \n              <ng-template #elseTemplateProjeto>\n                <img src=\"{{projeto.src}}\" alt=\"{{projeto.local}} \">\n              </ng-template>\n              \n              <div>\n                <h4>{{projeto.nome}}</h4>\n                <!-- <h5>Participantes: {{projeto.participantes}}</h5> -->\n                <h5>Local: {{projeto.local}}</h5>\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n  \n    <!-- <div id=\"carouselProjetos \" class=\"projeto carousel slide d-md-none d-lg-none \" data-ride=\"carousel \">\n      <div class=\"carousel-inner \">\n        <div class=\"carousel-item justify-content-center align-items-center \" *ngFor=\"let projeto of projeto.projetos;let\n      i=index; let isFirst=f irst \" [class.active]=\"isFirst \">\n          <div class=\"d-flex justify-content-center align-items-center \">\n            <img src=\"{{this.PATH}}+{{projeto.folder}}+{{projeto.src}} \" alt=\"{{projeto.local}} \">\n            <div>\n              <h4>{{projeto.nome}}</h4>\n              <h5>Participantes: {{projeto.participantes}}</h5>\n              <h5>Local: {{projeto.local}}</h5>\n            </div>\n          </div>\n        </div>\n  \n      </div>\n      <a class=\"carousel-control-prev \" href=\"#carouselProjetos \" role=\"button \" data-slide=\"prev \">\n        <span class=\"btn-carrousel carousel-control-prev-icon \" aria-hidden=\"true \"></span>\n        <span class=\"sr-only \">Previous</span>\n      </a>\n      <a class=\"carousel-control-next \" href=\"#carouselProjetos \" role=\"button \" data-slide=\"next \">\n        <span class=\"btn-carrousel carousel-control-next-icon \" aria-hidden=\"true \"></span>\n        <span class=\"sr-only \">Next</span>\n      </a>\n    </div> -->\n  </section>\n  "
 
 /***/ }),
 
@@ -681,9 +681,9 @@ var ProjetosComponent = (function () {
                         local: 'Rio Grande do Norte'
                     },
                     {
-                        src: PATH + "fe/fe-juv-empreendedora-digital.png",
+                        src: PATH + "fe/fe-juv-empreendedora-digital-pe.png",
                         nome: 'JUVENTUDE EMPREENDEDORA DIGITAL',
-                        href: 'http://wilivro.com.br/site-juventudeempreendedoradigital',
+                        href: 'http://wilivro.github.io/site-juventudeempreendedoradigital',
                         participantes: 380,
                         local: 'Pernambuco'
                     },
@@ -691,6 +691,20 @@ var ProjetosComponent = (function () {
                         src: PATH + "fe/fe-juventude-empreendedora-al.png",
                         nome: 'JUVENTUDE EMPREENDEDORA',
                         href: 'http://juventudeempreendedoraal.com.br/',
+                        participantes: 420,
+                        local: 'Alagoas'
+                    },
+                    {
+                        src: PATH + "fe/fe-gestao-do-negocio.png",
+                        nome: 'GESTÃO DO NEGÓCIO',
+                        href: '#',
+                        participantes: 420,
+                        local: 'Alagoas'
+                    },
+                    {
+                        src: PATH + "fe/fe-ed-finan.png",
+                        nome: 'EDUCAÇÃO FINANCEIRA-DESENVOLVE',
+                        href: '#',
                         participantes: 420,
                         local: 'Alagoas'
                     }]
@@ -760,7 +774,7 @@ var ProjetosComponent = (function () {
                 projetos: [{
                         src: PATH + "lg/lg-logitec-al.png",
                         nome: 'LOGITEC AL',
-                        href: 'http://wilivro.com.br/site-logitec.al/',
+                        href: 'http://wilivro.github.io/site-logitec.al/',
                         participantes: 380,
                         local: 'Alagoas'
                     }, {
@@ -789,9 +803,16 @@ var ProjetosComponent = (function () {
                         local: 'Pernambuco'
                     },
                     {
-                        src: PATH + "ept/fmt-taxista-amigo-pe.png",
+                        src: PATH + "ept/ept-taxista-amigo-pe.png",
                         nome: 'TAXISTA AMIGO',
                         href: 'http://taxistaamigope.wilivro.com.br/',
+                        participantes: 420,
+                        local: 'Pernambuco'
+                    },
+                    {
+                        src: PATH + "ept/ept-educacao-no-transito.png",
+                        nome: 'EDUCAÇÃO NO TRÂNSITO PARA MOTOCICLISTAS',
+                        href: 'http://jogos.wilivro.com.br/',
                         participantes: 420,
                         local: 'Pernambuco'
                     }]

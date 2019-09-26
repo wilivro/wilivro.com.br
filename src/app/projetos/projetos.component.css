@@ -90,3 +90,9 @@
   font-size: 14px;
   font-family: OpenSans;
 }
+
+.c-black, .c-black:hover, 
+.c-black:active, .c-black:focus {
+  text-decoration: none;
+  color: #000;
+}
