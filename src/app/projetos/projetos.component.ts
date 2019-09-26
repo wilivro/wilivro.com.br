@@ -38,9 +38,9 @@ export class ProjetosComponent implements OnInit {
         local: 'Rio Grande do Norte'
       },
       {
-        src: PATH + "fe/fe-juv-empreendedora-digital.png",
+        src: PATH + "fe/fe-juv-empreendedora-digital-pe.png",
         nome: 'JUVENTUDE EMPREENDEDORA DIGITAL',
-        href: 'http://wilivro.com.br/site-juventudeempreendedoradigital',
+        href: 'http://wilivro.github.io/site-juventudeempreendedoradigital',
         participantes: 380,
         local: 'Pernambuco'
       },
@@ -48,6 +48,20 @@ export class ProjetosComponent implements OnInit {
         src: PATH + "fe/fe-juventude-empreendedora-al.png",
         nome: 'JUVENTUDE EMPREENDEDORA',
         href: 'http://juventudeempreendedoraal.com.br/',
+        participantes: 420,
+        local: 'Alagoas'
+      },
+      {
+        src: PATH + "fe/fe-gestao-do-negocio.png",
+        nome: 'GESTÃO DO NEGÓCIO',
+        href: '#',
+        participantes: 420,
+        local: 'Alagoas'
+      },
+      {
+        src: PATH + "fe/fe-ed-finan.png",
+        nome: 'EDUCAÇÃO FINANCEIRA-DESENVOLVE',
+        href: '#',
         participantes: 420,
         local: 'Alagoas'
       }]
@@ -117,7 +131,7 @@ export class ProjetosComponent implements OnInit {
       projetos: [{
         src: PATH + "lg/lg-logitec-al.png",
         nome: 'LOGITEC AL',
-        href: 'http://wilivro.com.br/site-logitec.al/',
+        href: 'http://wilivro.github.io/site-logitec.al/',
         participantes: 380,
         local: 'Alagoas'
       }, {
@@ -146,9 +160,16 @@ export class ProjetosComponent implements OnInit {
         local: 'Pernambuco'
       },
       {
-        src: PATH + "ept/fmt-taxista-amigo-pe.png",
+        src: PATH + "ept/ept-taxista-amigo-pe.png",
         nome: 'TAXISTA AMIGO',
         href: 'http://taxistaamigope.wilivro.com.br/',
+        participantes: 420,
+        local: 'Pernambuco'
+      },
+      {
+        src: PATH + "ept/ept-educacao-no-transito.png",
+        nome: 'EDUCAÇÃO NO TRÂNSITO PARA MOTOCICLISTAS',
+        href: 'http://jogos.wilivro.com.br/',
         participantes: 420,
         local: 'Pernambuco'
       }]
